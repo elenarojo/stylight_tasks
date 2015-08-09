@@ -2,7 +2,7 @@
 
 @media screen 
 and (min-device-width: 1200px) 
-and (max-device-width: 1600px) 
+and (max-device-width: 3000px) 
 {
     body{
         font-family: Arial;
@@ -176,8 +176,15 @@ and (max-device-width: 1600px)
                     border: 0px solid black;
                     display: block;
 
+                    -moz-transition: none;
+                    -webkit-transition: none;
+                    -o-transition: color 0 ease-in;
+                    transition: none;
+
                 }
             }
+            
+            
 
         }
 
@@ -187,8 +194,13 @@ and (max-device-width: 1600px)
             overflow: hidden;
             max-height: 0;
             margin-left: 20px;
-
+            opacity: 1;
             display: none;
+
+            -moz-transition: none;
+            -webkit-transition: none;
+            -o-transition: color 0 ease-in;
+            transition: none;
 
             a{
                 text-decoration: none;
@@ -200,6 +212,11 @@ and (max-device-width: 1600px)
         .nav-sub{
             padding: 10px 20px;
             position: relative;
+
+            -moz-transition: none;
+            -webkit-transition: none;
+            -o-transition: color 0 ease-in;
+            transition: none;
 
             ul{
 
