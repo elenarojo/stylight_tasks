@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Task 3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="stylesheets/task_3.css">
+    </head>
+    <body>
+
+        <!--[if IE 9]>
+        <style type="text/css">
+            @media screen 
+                and (min-device-width: 1200px) 
+                and (max-device-width: 1600px) 
+            {
+                #nav-main
+                {
+                    display:table;
+                    width:100%;
+                    border-collapse:collapse;
+                    border:none;
+                    position: relative;
+                    z-index: 10;
+                }
+
+                #primary_nav_wrap ul
+                {
+                    float:none;
+                    display:table-row;
+                    text-align:center;
+                    list-style:none;
+                }
+
+                #primary_nav_wrap ul a
+                {
+                    display:block;
+                }
+
+                #primary_nav_wrap ul li
+                {
+                    float:none;
+                    display:table-cell;
+                    margin:0;
+                }
+
+                #primary_nav_wrap ul ul
+                {
+                    display:none;
+                    border:none;
+                    position:absolute;
+                    top:100%;
+                    left:0;
+                    text-align:left;
+                    padding:0;
+                    width:auto;
+                }
+
+                #primary_nav_wrap ul ul li
+                {
+                    position:relative;
+                    float:none;
+                    display:block;
+                }
+
+                #primary_nav_wrap ul ul a
+                {
+                    line-height:120%;
+                    padding:10px 15px;
+                }
+
+                #primary_nav_wrap ul ul ul
+                {
+                    top:0;
+                    left:100%;
+                }
+
+                #primary_nav_wrap ul li:hover > ul
+                {
+                    display:block;
+                }
+            }
+        </style>
+        <![endif]-->
+
+        <script>
+            var menuStatus = "closed";
+            function showMenu() {
+                var wrapper = document.getElementById("wrapper");
+                if (menuStatus == "closed")
+                {
+                    wrapper.setAttribute("class", "show-nav");
+                    menuStatus = "open";
+                }
+                else
+                {
+                    wrapper.className = "";
+                    menuStatus = "closed";
+                }
+
+            }
+            function openSubMenu(el)
+            {
+                var el_status = el.className;
+                var nav_elements = document.getElementsByClassName("open");
+                if (nav_elements.length > 0)
+                {
+                    nav_elements[0].className = "nav-item";
+                }
+
+                if (el_status != "nav-item open")
+                {
+                    el.className = "nav-item open";
+
+                }
+
+
+            }
+        </script>
+        <div id="wrapper">
+            <div id="canvas">
+                <header id="menu">
+                    <nav class="nav-main clear">
+                        <ul >
+                            <li><a href="#" class="nav-item">Link</a></li>
+                            <li><a href="#" class="nav-item">Link</a></li>
+                            <li><a href="#" class="nav-item">Link</a></li>
+                            <li><a href="#" class="nav-item" onclick="openSubMenu(this)">Dropdown</a>
+                                <div class="nav-content">
+                                    <div class="nav-sub">
+                                        <ul>
+                                            <li><a href="#">sublink</a></li>
+                                            <li><a href="#">sublink</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#" class="nav-item" onclick="openSubMenu(this)">Dropdown</a>
+                                <div class="nav-content">
+                                    <div class="nav-sub">
+                                        <ul>
+                                            <li><a href="#">sublink</a></li>
+                                            <li><a href="#">sublink</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="searchbox">
+                        <p>Search</p>
+                    </div>
+                </header>
+                <div id="content">
+                    <div>
+                        <img src="img/menu.png" width="24" onclick="showMenu();">
+                    </div>
+                    Content
+                </div>
+            </div>
+
+
+        </div>
+
+    </body>
+
+
+</html>
