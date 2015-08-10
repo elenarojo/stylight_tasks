@@ -17,72 +17,23 @@ and open the template in the editor.
         <style type="text/css">
             @media screen 
                 and (min-device-width: 1200px) 
-                and (max-device-width: 1600px) 
+                and (max-device-width: 3000px) 
             {
-                #nav-main
-                {
-                    display:table;
-                    width:100%;
+                header{
+                    display: table;
+                    width: 100%;
+                }
+        
+                #searchbox
+                { 
+                    display: table-cell;
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+                    vertical-align:top;
                     border-collapse:collapse;
-                    border:none;
-                    position: relative;
                     z-index: 10;
-                }
-
-                #primary_nav_wrap ul
-                {
-                    float:none;
-                    display:table-row;
-                    text-align:center;
-                    list-style:none;
-                }
-
-                #primary_nav_wrap ul a
-                {
-                    display:block;
-                }
-
-                #primary_nav_wrap ul li
-                {
-                    float:none;
-                    display:table-cell;
-                    margin:0;
-                }
-
-                #primary_nav_wrap ul ul
-                {
-                    display:none;
-                    border:none;
-                    position:absolute;
-                    top:100%;
-                    left:0;
-                    text-align:left;
-                    padding:0;
-                    width:auto;
-                }
-
-                #primary_nav_wrap ul ul li
-                {
-                    position:relative;
-                    float:none;
-                    display:block;
-                }
-
-                #primary_nav_wrap ul ul a
-                {
-                    line-height:120%;
-                    padding:10px 15px;
-                }
-
-                #primary_nav_wrap ul ul ul
-                {
-                    top:0;
-                    left:100%;
-                }
-
-                #primary_nav_wrap ul li:hover > ul
-                {
-                    display:block;
+                    height: 10px !important;
                 }
             }
         </style>
